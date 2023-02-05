@@ -8,9 +8,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ActionBarComponent {
 
   @Input() step:number = 1;
-  
+
   @Input() counter:number = 0;
   @Output() counterChange = new EventEmitter();  
+
+  @Input() inputDisplay:boolean = false;
 
   
   decrease(){

@@ -1,3 +1,22 @@
-<app-max-min-meter [labelMin]="appLabelMin" [labelMax]="appLabelMax" (minChange)="doMinChange($event)" (maxChange)="doMaxChange($event)"></app-max-min-meter>
+<div>
+    <h2>Count Change</h2>
+    <app-max-min-meter [labelMin]="appLabelMin" [labelMax]="appLabelMax" (minChange)="doMinChange($event)" (maxChange)="doMaxChange($event)"></app-max-min-meter>
+</div>
 
-<app-sqaure-width [width_sqaure]="100" [height_sqaure]="200"></app-sqaure-width>
+
+
+<div>
+    <h2>Square Width</h2>
+    <app-sqaure-width [width_sqaure]="100" [height_sqaure]="200"></app-sqaure-width>
+</div>
+
+
+
+<div>
+    <h2>Array userList</h2>
+    <ul>
+        <li *ngFor="let user of userList; let i = index">{{user}}<button style="margin: 5px;" (click)="removeUser(i)">remove</button></li>
+    </ul>
+    <button (click)="pushUser()">Push</button>
+    <button (click)="unshiftUser()">Unshitf</button>
+</div>
